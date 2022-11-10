@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>Orbitali</title>
+        <style>
+            body {background-image: url('sfondo_chimica.jpg');
+                  background-attachment: fixed;
+                  background-size: 100% 100%;
+                  padding:20px;}
+            canvas {
+                border: 3px solid rgba(1, 81, 152, 255);
+                box-shadow: 15px 15px 40px rgb(255, 128, 0);
+            }
+            .signature {
+              text-align: right;
+              font-size:smaller;
+            }
+            h1 span { background-color: #DC7FB2;}
+            h2 span {background-color: #80C896;}
+            p span{background-color: #e0e0e0;}
+        </style>
+        </style>
+        <script src="https://cdn.babylonjs.com/babylon.js"></script>
+        <script src="https://code.jquery.com/pep/0.4.3/pep.js"></script>
+        <script src="mylib.js"></script>
+        <script src="orbitale_s.js"></script>
+        <script src="orbitale_p.js"></script>
+        <script src="orbitale_d.js"></script>
+        <script src="orbitale_f.js"></script>
+        <script src="ibridazione_s_p.js"></script>
+        <script src="legame_sigma.js"></script>
+        <script src="legame_pi.js"></script>
+        <script src="ibridazione_sp3.js"></script>
+        <script src="ibridazione_sp2.js"></script>
+        <script src="ibridazione_sp.js"></script>
+        <script src="benzene_orb.js"></script>
+        <script src="benzene_ibr.js"></script>
+
+    </head>
+    <body>
+        <h1><span> Orbitali </span></h1>
+        <p><span> L'orbitale corrisponde a quella zona nello spazio circostante al nucleo in cui è massima la probabilità di trovare l'elettrone.
+        Racchiudendo entro una superficie limitante tutti i punti per i quali l'elettrone ha la massima probabilità di passare nel suo moto intorno al nucleo, si ottiene una figura geometrica, simmetrica rispetto al nucleo, che dà un idea della "forma" dell'orbitale.
+        In questa dispensa potrete esplorare le forme degli orbitali s,p,d,f , le loro ibridazioni più comuni e i loro legami.</span></p>
+        <p><span>Tuttavia è molto importante ricordare che la distribuzione complessiva degli elettroni di qualunque atomo isolato è sempre perfettamente sferica.
+        Dentro a tale sfera si possono individuare zone con maggiore o minore densità elettronica, ma esse, rispetto al nucleo, hanno sempre simmetria sferica.</span></p>
+        <h2><span>Orbitale S</h2>
+        <canvas id="orbitale_s" width="400" height="320"></canvas>
+        <p><span>L'orbitale s ha forma sferica.</span></p>
+
+        <h2><span>Orbitale P</span></h2>
+        <canvas id="orbitale_p" width="500" height="420"></canvas>
+        <p><span>Gli orbitali p hanno una forma di doppio lobo. Possiamo individuare tre orbitali, uno per ogni asse spaziale : p<sub>x</sub>, p<sub>y</sub> e p<sub>z</sub>.</span></p>
+
+        <h2><span>Orbitale D</span></h2>
+        <canvas id="orbitale_d" width="800" height="420"></canvas>
+        <p><span>Gli orbitali d hanno una forma a quattro lobi. Vengono chiamati orbitali degeneri. Possiamo individuare cinque orbitali: d<sub>yz</sub>, d<sub>xy</sub>, d<sub>z<sup>2</sup></sub>, d<sub>x<sup>2</sup>-y<sup>2</sup></sub>, d<sub>xz</sub>.</span></p>
+
+        <h2><span>Orbitale F</span></h2>
+        <canvas id="orbitale_f" width="1100" height="420"></canvas>
+        <p><span>Gli orbitali f hanno forme molto diverse tra di loro. Vengono chiamati orbitali degeneri. Possiamo individuare sette orbitali: f<sub>xyz</sub>, f<sub>5xz<sup>2</sup>-x<sup>2</sup></sub>, f<sub>y<sup>3</sup>-3x<sup>2</sup>y</sub>, f<sub>z<sup>3</sup>-3z<sup>2</sup></sub>, f<sub>x<sup>3</sup>-3y<sup>2</sup>x</sub>, f<sub>5yz<sup>2</sup>-y<sup>2</sup></sub>, f<sub>zx<sup>2</sup>-zy<sup>2</sup></sub>. </span></p>
+
+        <h2><span>Legame Sigma</span></h2>
+        <p><span>Un legame σ si stabilisce dalla sovrapposizione diretta di due orbitali atomici. La distribuzione elettronica è concentrata lungo l'asse di legame ed è disposta in modo simmetrico attorno a esso. I legami di tipo σ sono di tipo legame covalente e costituiscono il più forte tipo di legame.</span></p>
+        <canvas id="legame_sigma" width="450" height="400"></canvas>
+        <p><span>Viene rappresentato il legame σ tra due orbitali p e tra due orbitali s.</span></p>
+
+        <h2><span>Legame PI</span></h2>
+        <canvas id="legame_pi" width="450" height="400"></canvas>
+        <p><span>Un legame π si stabilisce dalla sovrapposizione laterale di due orbitali atomici si tipo p. La distribuzione elettronica è concentrata in due zone situate da parti opposte rispetto all'asse di legame.</span></p>
+
+        <h2><span>Ibridazione S-P</span></h2>
+        <canvas id="ibridazione_s_p" width="400" height="320"></canvas>
+        <p><span>L'ibridazione s-p è un legame sigma tra un orbitale s ed un orbitale p. </span></p>
+
+        <h2><span>Ibridazione sp3</span></h2>
+        <canvas id="ibridazione_sp3" width="500" height="420"></canvas>
+        <p><span>Nell’ibridazione sp3 un elettrone appartenente all’orbitale s e tre elettroni appartenenti all’orbitale p formano 4 orbitali ibridi ciascuno dei quali ha il 25 % di carattere s e il 75 % di carattere p.</span></p>
+
+        <h2><span>Ibridazione sp2</span></h2>
+        <canvas id="ibridazione_sp2" width="500" height="420"></canvas>
+        <p><span>Nell’ibridazione sp2 un elettrone appartenente all’orbitale s e due elettroni appartenenti all’orbitale p formano 3 orbitali ibridi ciascuno dei quali ha il 33.3 % di carattere s e il 66.7 % di carattere p.</span></p>
+
+        <h2><span>Ibridazione sp</span></h2>
+        <canvas id="ibridazione_sp" width="500" height="420"></canvas>
+        <p><span>Nell’ibridazione sp un elettrone appartenente all’orbitale s e un elettrone appartenente all’orbitale p formano 2 orbitali ibridi ciascuno dei quali ha il 50 % di carattere s e il 50 % di carattere p.</span></p>
+
+        <h2><span>Benzene</span></h2>
+        <canvas id="benzene_orb" width="600" height="520"></canvas>
+        <canvas id="benzene_ibr" width="600" height="520"></canvas>
+        <p><span>Tutti gli atomi di carbonio sono legati con ibridazione sp2 (sia con l'idrogeno che con altri carboni). Gli orbitali pz puri di ogni carbonio si sovrappongono a formare una nube di elettroni sopra e sotto il piano dell'anello.</span></p>
+
+        <p class="signature">
+            Simone Santarsiero <i>(simonesantarsiero04@gmail.com)</i>
+          </p>
+    </body>
+</html>
