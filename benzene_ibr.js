@@ -60,7 +60,7 @@ function populateScene(scene) {
 function ibridato (scene){
     let material1 = new BABYLON.StandardMaterial('mat', scene);
     material1.diffuseColor.set(0.9,0.9,0.6);
-    //material1.alpha = 0.1;
+    material1.alpha = 0.9;
     let torus = MYLIB.torus(1.3,0,1.5,0,0,0,0,5,3,5,material1,scene);
     let torus1 = MYLIB.torus(1.3,0,-1.5,0,0,0,0,5,3,5,material1,scene);
 }
