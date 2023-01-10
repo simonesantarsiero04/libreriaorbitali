@@ -19,8 +19,8 @@ function populateScene(scene) {
     let drop3 = MYLIB.createDrop(0.6,0.6,0.4,0.8,position,0,Math.PI,0,0,1.4,1.4,1.4,material);
     let drop4 = MYLIB.createDrop(0.6,0.6,0.4,0.8,position,0,0,0,0,1.4,1.4,1.4,material);
 
-    let pi1 = pi_bound(0,position1+0.5,0, 0,0,0,material1);
-    let pi2 = pi_bound(0,position1-0.5,0,0, Math.PI, 0, material1);
+    let pi1 = pi_bound(0,position1+0.5,0,0,0,0,material1);
+    let pi2 = pi_bound(0,position1-0.5,0,Math.PI,0,0,material1);
 }
 
 
@@ -31,8 +31,8 @@ function pi_bound(px,py,pz,rx,ry,rz,material,scene) {
     vd.indices = [];
     vd.normals = [];
     const param = -0.7;//quanto è tirata la punta
-    const height = 1;//lunghezza
-    const radius = 1.5;//raggio
+    const height = 0.6;//lunghezza
+    const radius = 0.8;//raggio
     for(let iu=0;iu<nu;iu++) {
         let u = iu/(nu-1);
         for(let iv=0;iv<nv;iv++) {
