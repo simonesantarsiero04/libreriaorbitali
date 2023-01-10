@@ -21,8 +21,13 @@ function populateScene(scene) {
 
     let pi1 = pi_bound(0,position1+0.4,0,0,0,0,material1);
     let pi2 = pi_bound(0,position1-0.4,0,Math.PI,0,0,material1);
-}
+    
+    let axis1 = MYLIB.axis_grid(false,false,false);
+    axis1.position.y= position;
 
+    let axis2 = MYLIB.axis_grid(false,false,false);
+    axis2.position.y= position1;
+}
 
 function pi_bound(px,py,pz,rx,ry,rz,material,scene) {
     let nu = 40, nv = 40;
