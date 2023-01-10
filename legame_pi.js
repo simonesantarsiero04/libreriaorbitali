@@ -19,8 +19,8 @@ function populateScene(scene) {
     let drop3 = MYLIB.createDrop(0.6,0.6,0.4,0.8,position,0,Math.PI,0,0,1.4,1.4,1.4,material);
     let drop4 = MYLIB.createDrop(0.6,0.6,0.4,0.8,position,0,0,0,0,1.4,1.4,1.4,material);
 
-    let pi1 = pi_bound(0,position1+0.5,0,0,0,0,material1);
-    let pi2 = pi_bound(0,position1-0.5,0,Math.PI,0,0,material1);
+    let pi1 = pi_bound(0,position1+0.4,0,0,0,0,material1);
+    let pi2 = pi_bound(0,position1-0.4,0,Math.PI,0,0,material1);
 }
 
 
