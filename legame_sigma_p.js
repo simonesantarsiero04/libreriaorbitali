@@ -5,7 +5,7 @@ function populateScene(scene) {
     scene.activeCamera.beta = 1.2;
 
     position = 2;
-    position1 = -2;
+    position1 = -1;
     
     let material = new BABYLON.StandardMaterial("-mat", scene);
     material.diffuseColor.set(0.9,0.9,0.1);
